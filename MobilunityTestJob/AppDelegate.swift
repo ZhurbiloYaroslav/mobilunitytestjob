@@ -10,12 +10,17 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    private let appDependencyContainer = AppDependencyContainer()
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
+        configureRootScreenInWindow()
         return true
+    }
+    
+    func configureRootScreenInWindow() {
+        let newWindow = UIWindow(frame: UIScreen.main.bounds)
+        window = newWindow
     }
 }
 
