@@ -138,9 +138,7 @@
 		C4D90689243249CC00B34A20 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				C4D9069024324B8800B34A20 /* AssemblerRouter */,
-				C4D9069124324BA500B34A20 /* Presenter */,
-				C4D9069224324BAD00B34A20 /* Controller */,
+				C4D906A2243255A800B34A20 /* RootScreen */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -194,6 +192,16 @@
 				C4D906A02432501200B34A20 /* Presentable.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		C4D906A2243255A800B34A20 /* RootScreen */ = {
+			isa = PBXGroup;
+			children = (
+				C4D9069024324B8800B34A20 /* AssemblerRouter */,
+				C4D9069124324BA500B34A20 /* Presenter */,
+				C4D9069224324BAD00B34A20 /* Controller */,
+			);
+			path = RootScreen;
 			sourceTree = "<group>";
 		};
 		D2DC620FA52769E56CFBCB04 /* Pods */ = {
