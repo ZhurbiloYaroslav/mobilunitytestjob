@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  RootViewController.swift
 //  MobilunityTestJob
 //
 //  Created by Yaroslav Zhurbilo on 30.03.20.
@@ -8,13 +8,19 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+protocol RootViewInput {
+    
+}
+    
+class RootViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
-
 
 }
 
+extension RootViewController: RootViewInput {
+    
+}
