@@ -10,6 +10,7 @@ import UIKit
 import Swinject
 
 typealias RootVCFactory = (_ presenter: RootViewOutput) -> RootViewInput
+typealias RepositoriesListScreenFactory = () -> RepositoriesListScreen
 
 class RootDIContainer {
     private let container: Container
@@ -21,6 +22,10 @@ class RootDIContainer {
                 let rootScreen = RootScreen(rootPresenter: presenter, rootVCFactory: {
                     resolver.resolve(RootVCFactory.self, argument: presenter)!
                 })
+                rootScreen.set(repositoriesListScreenFactory: {
+                    resolver.resolve(RepositoriesListScreenFactory.self)!
+                })
+                presenter.attach(router: rootScreen)
                 return rootScreen
             }
             container.register(RootViewOutput.self) { resolver -> RootViewOutput in
@@ -32,6 +37,11 @@ class RootDIContainer {
                     viewController.attach(output: presenter)
                     presenter.attach(view: viewController)
                     return viewController
+                }
+            }
+            container.register(RepositoriesListScreenFactory.self) { _ in
+                return {
+                    RepositoriesListDIContainer(parentContainer: container).makeRepositoriesScreen()
                 }
             }
         }
