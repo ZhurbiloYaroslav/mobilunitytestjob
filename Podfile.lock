@@ -3,6 +3,19 @@ PODS:
   - IGListDiffKit (4.0.0)
   - IGListKit (4.0.0):
     - IGListDiffKit (= 4.0.0)
+  - OHHTTPStubs/Core (9.0.0)
+  - OHHTTPStubs/Default (9.0.0):
+    - OHHTTPStubs/Core
+    - OHHTTPStubs/JSON
+    - OHHTTPStubs/NSURLSession
+    - OHHTTPStubs/OHPathHelpers
+  - OHHTTPStubs/JSON (9.0.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/NSURLSession (9.0.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/OHPathHelpers (9.0.0)
+  - OHHTTPStubs/Swift (9.0.0):
+    - OHHTTPStubs/Default
   - R.swift (5.1.0):
     - R.swift.Library (~> 5.1.0)
   - R.swift.Library (5.1.0)
@@ -11,7 +24,8 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (= 5.0.5)
-  - IGListKit
+  - IGListKit (= 4.0.0)
+  - OHHTTPStubs/Swift (= 9.0.0)
   - R.swift (= 5.1.0)
   - RxSwift (= 5.1.1)
   - Swinject (= 2.7.1)
@@ -21,6 +35,7 @@ SPEC REPOS:
     - Alamofire
     - IGListDiffKit
     - IGListKit
+    - OHHTTPStubs
     - R.swift
     - R.swift.Library
     - RxSwift
@@ -30,11 +45,12 @@ SPEC CHECKSUMS:
   Alamofire: df2f8f826963b08b9a870791ad48e07a10090b2e
   IGListDiffKit: 665d6cf43ce726e676013db9c7d6c4294259b6b2
   IGListKit: fd5a5d21935298f5849fa49d426843cff97b77c7
+  OHHTTPStubs: cb29d2a9d09a828ecb93349a2b0c64f99e0db89f
   R.swift: 8cbc4fc69b740305b6a17c8a8ed968eb788962d9
   R.swift.Library: fa85ce1e0d0b7e818cd9e080df910ba54d2776cc
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
 
-PODFILE CHECKSUM: ae49958e6e6e933e2e39dd32cd4d57a58a5bb462
+PODFILE CHECKSUM: 55ab0c9c29d78b999583c70ad84a94102e3c145e
 
 COCOAPODS: 1.9.1

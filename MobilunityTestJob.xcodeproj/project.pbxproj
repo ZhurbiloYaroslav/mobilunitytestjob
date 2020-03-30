@@ -390,6 +390,7 @@
 				C4D906752432445F00B34A20 /* Sources */,
 				C4D906762432445F00B34A20 /* Frameworks */,
 				C4D906772432445F00B34A20 /* Resources */,
+				3A9E0EB6217C2B80719135A9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -461,6 +462,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3A9E0EB6217C2B80719135A9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MobilunityTestJobTests/Pods-MobilunityTestJobTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MobilunityTestJobTests/Pods-MobilunityTestJobTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MobilunityTestJobTests/Pods-MobilunityTestJobTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		46DE177738A16A8C3531A01B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -762,7 +780,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B6CF151410D6AF38DEFA7D65 /* Pods-MobilunityTestJobTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4PM46468DE;
@@ -785,7 +802,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4859BABE908990C95C922049 /* Pods-MobilunityTestJobTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4PM46468DE;
