@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func configureRootScreenInWindow() {
         let newWindow = UIWindow(frame: UIScreen.main.bounds)
+        appDependencyContainer.makeRootScreen().configure(in: newWindow)
         window = newWindow
     }
 }

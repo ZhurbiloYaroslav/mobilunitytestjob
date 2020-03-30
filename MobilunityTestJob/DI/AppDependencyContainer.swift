@@ -12,7 +12,13 @@ import Swinject
 class AppDependencyContainer {
     private lazy var appDIContainer: Container = {
         Container { container in
-            
+            container.register(RootDIContainer.self) { resolver -> RootDIContainer in
+                RootDIContainer(parentContainer: container)
+            }
         }
     }()
+    
+    func makeRootScreen() -> RootScreen {
+        appDIContainer.resolve(RootDIContainer.self)!.makeRootScreen()
+    }
 }

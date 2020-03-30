@@ -8,19 +8,24 @@
 
 import UIKit
 
-protocol RootViewInput {
-    
+protocol RootViewInput: class, Presentable {
+    func attach(output: RootViewOutput)
 }
     
 class RootViewController: UIViewController {
+    private var output: RootViewOutput?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.backgroundColor = .yellow
+        output?.didLoad()
     }
 
 }
 
 extension RootViewController: RootViewInput {
-    
+    func attach(output: RootViewOutput) {
+        self.output = output
+    }
 }

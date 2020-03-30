@@ -9,13 +9,20 @@
 import Foundation
 
 protocol RootViewOutput {
-    
+    func attach(view: RootViewInput)
+    func didLoad()
 }
 
 final class RootPresenter {
-    
+    private weak var view: RootViewInput?
 }
 
 extension RootPresenter: RootViewOutput {
+    func attach(view: RootViewInput) {
+        self.view = view
+    }
     
+    func didLoad() {
+        // TODO: Implement it
+    }
 }
