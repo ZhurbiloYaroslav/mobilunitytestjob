@@ -5,7 +5,7 @@ target 'MobilunityTestJob' do
   use_frameworks!
 
   # Pods for MobilunityTestJob
-  pod 'Swinject'
+  pod 'Swinject', '2.7.1'
 
   target 'MobilunityTestJobTests' do
     inherit! :search_paths
