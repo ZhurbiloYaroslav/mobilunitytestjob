@@ -26,6 +26,7 @@
 		C4D906AF2432588000B34A20 /* RepositoriesList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4D906AE2432588000B34A20 /* RepositoriesList.storyboard */; };
 		C4D906B1243258D800B34A20 /* RepositoriesListDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D906B0243258D700B34A20 /* RepositoriesListDIContainer.swift */; };
 		C4D906B424325F6C00B34A20 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D906B324325F6C00B34A20 /* R.generated.swift */; };
+		C4D906B82432617600B34A20 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D906B72432617600B34A20 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		C4D906AE2432588000B34A20 /* RepositoriesList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RepositoriesList.storyboard; sourceTree = "<group>"; };
 		C4D906B0243258D700B34A20 /* RepositoriesListDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesListDIContainer.swift; sourceTree = "<group>"; };
 		C4D906B324325F6C00B34A20 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		C4D906B72432617600B34A20 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		D45263C9249D4C943F195F8A /* Pods-MobilunityTestJob.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobilunityTestJob.debug.xcconfig"; path = "Target Support Files/Pods-MobilunityTestJob/Pods-MobilunityTestJob.debug.xcconfig"; sourceTree = "<group>"; };
 		F7933F322F266233DB89414C /* Pods_MobilunityTestJobTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobilunityTestJobTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -122,10 +124,11 @@
 			children = (
 				C4D906662432445B00B34A20 /* AppDelegate.swift */,
 				C4D9068B24324A9600B34A20 /* DI */,
+				C4D90688243249B200B34A20 /* Configuration */,
 				C4D9068A243249DB00B34A20 /* Resources */,
 				C4D9069B24324F9700B34A20 /* Protocols */,
+				C4D906B52432611700B34A20 /* Services */,
 				C4D90689243249CC00B34A20 /* Scenes */,
-				C4D90688243249B200B34A20 /* Configuration */,
 			);
 			path = MobilunityTestJob;
 			sourceTree = "<group>";
@@ -260,6 +263,22 @@
 				C4D906AC2432581400B34A20 /* RepositoriesListPresenter.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		C4D906B52432611700B34A20 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C4D906B62432615200B34A20 /* NetworkManager */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		C4D906B62432615200B34A20 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				C4D906B72432617600B34A20 /* NetworkManager.swift */,
+			);
+			path = NetworkManager;
 			sourceTree = "<group>";
 		};
 		D2DC620FA52769E56CFBCB04 /* Pods */ = {
@@ -472,6 +491,7 @@
 				C4D906AB243257CD00B34A20 /* RepositoriesListVC.swift in Sources */,
 				C4D9069A24324D7000B34A20 /* RootDIContainer.swift in Sources */,
 				C4D906B1243258D800B34A20 /* RepositoriesListDIContainer.swift in Sources */,
+				C4D906B82432617600B34A20 /* NetworkManager.swift in Sources */,
 				C4D906AD2432581400B34A20 /* RepositoriesListPresenter.swift in Sources */,
 				C4D9069D24324FA900B34A20 /* UIWindowConfigurable.swift in Sources */,
 				C4D9068F24324B7E00B34A20 /* RootScreen.swift in Sources */,
