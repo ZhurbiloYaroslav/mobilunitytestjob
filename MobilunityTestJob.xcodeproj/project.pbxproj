@@ -99,11 +99,9 @@
 			isa = PBXGroup;
 			children = (
 				C4D906662432445B00B34A20 /* AppDelegate.swift */,
-				C4D9066A2432445B00B34A20 /* ViewController.swift */,
-				C4D9066C2432445B00B34A20 /* Main.storyboard */,
-				C4D9066F2432445F00B34A20 /* Assets.xcassets */,
-				C4D906712432445F00B34A20 /* LaunchScreen.storyboard */,
-				C4D906742432445F00B34A20 /* Info.plist */,
+				C4D9068A243249DB00B34A20 /* Resources */,
+				C4D90689243249CC00B34A20 /* Scenes */,
+				C4D90688243249B200B34A20 /* Configuration */,
 			);
 			path = MobilunityTestJob;
 			sourceTree = "<group>";
@@ -115,6 +113,32 @@
 				C4D9067F2432445F00B34A20 /* Info.plist */,
 			);
 			path = MobilunityTestJobTests;
+			sourceTree = "<group>";
+		};
+		C4D90688243249B200B34A20 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				C4D906742432445F00B34A20 /* Info.plist */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		C4D90689243249CC00B34A20 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				C4D9066C2432445B00B34A20 /* Main.storyboard */,
+				C4D9066A2432445B00B34A20 /* ViewController.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		C4D9068A243249DB00B34A20 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C4D9066F2432445F00B34A20 /* Assets.xcassets */,
+				C4D906712432445F00B34A20 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		D2DC620FA52769E56CFBCB04 /* Pods */ = {
@@ -460,7 +484,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4PM46468DE;
-				INFOPLIST_FILE = MobilunityTestJob/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MobilunityTestJob/Configuration/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -480,7 +504,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4PM46468DE;
-				INFOPLIST_FILE = MobilunityTestJob/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MobilunityTestJob/Configuration/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
