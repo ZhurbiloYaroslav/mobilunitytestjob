@@ -9,6 +9,7 @@ target 'MobilunityTestJob' do
   pod 'Swinject', '2.7.1'
   pod 'RxSwift', '5.1.1'
   pod 'Alamofire', '5.0.5'
+  pod 'IGListKit', '4.0.0'
 
   target 'MobilunityTestJobTests' do
     inherit! :search_paths

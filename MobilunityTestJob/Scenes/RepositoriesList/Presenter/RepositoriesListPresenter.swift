@@ -29,12 +29,20 @@ class RepositoriesListPresenter {
         networkManager
             .request(GitHubAPI.SquareRepos.getRepositories())
             .observeOn(MainScheduler.instance)
-            .subscribe(onSuccess: { json in
-                // TODO: Handle it
+            .subscribe(onSuccess: { [weak self] response in
+                self?.handleSuccess(response: response)
             }, onError: { error in
                 // TODO: Handle it
             })
             .disposed(by: disposeBag)
+    }
+    
+    func handleSuccess(response: [SquareRepositoryModel]) {
+        let repositorySections: [RepositoriesListSection] = response.map {
+            let viewModel = RepositoriesListViewModel(repositoryModel: $0)
+            return RepositoriesListSection(id: .repository(viewModel))
+        }
+        view?.update(sections: repositorySections)
     }
     
 }

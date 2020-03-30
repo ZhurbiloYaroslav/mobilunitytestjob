@@ -31,6 +31,11 @@
 		C4D906BC2432626700B34A20 /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D906BB2432626700B34A20 /* HttpMethod.swift */; };
 		C4D906BE243262C000B34A20 /* GitHubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D906BD243262C000B34A20 /* GitHubAPI.swift */; };
 		C4D906C22432630000B34A20 /* SquareRepositoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D906C12432630000B34A20 /* SquareRepositoryModel.swift */; };
+		C4D906C52432701200B34A20 /* RepositoriesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D906C42432701200B34A20 /* RepositoriesListViewModel.swift */; };
+		C4D906C9243279A700B34A20 /* RepositoriesListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D906C8243279A700B34A20 /* RepositoriesListSection.swift */; };
+		C4D906CC24327B6200B34A20 /* ReposistoryListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D906CA24327B6200B34A20 /* ReposistoryListItemCell.swift */; };
+		C4D906CD24327B6200B34A20 /* ReposistoryListItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4D906CB24327B6200B34A20 /* ReposistoryListItemCell.xib */; };
+		C4D906D1243280A800B34A20 /* RepositoriesListItemSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D906D0243280A800B34A20 /* RepositoriesListItemSectionController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +79,11 @@
 		C4D906BB2432626700B34A20 /* HttpMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
 		C4D906BD243262C000B34A20 /* GitHubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAPI.swift; sourceTree = "<group>"; };
 		C4D906C12432630000B34A20 /* SquareRepositoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareRepositoryModel.swift; sourceTree = "<group>"; };
+		C4D906C42432701200B34A20 /* RepositoriesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesListViewModel.swift; sourceTree = "<group>"; };
+		C4D906C8243279A700B34A20 /* RepositoriesListSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesListSection.swift; sourceTree = "<group>"; };
+		C4D906CA24327B6200B34A20 /* ReposistoryListItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposistoryListItemCell.swift; sourceTree = "<group>"; };
+		C4D906CB24327B6200B34A20 /* ReposistoryListItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReposistoryListItemCell.xib; sourceTree = "<group>"; };
+		C4D906D0243280A800B34A20 /* RepositoriesListItemSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesListItemSectionController.swift; sourceTree = "<group>"; };
 		D45263C9249D4C943F195F8A /* Pods-MobilunityTestJob.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobilunityTestJob.debug.xcconfig"; path = "Target Support Files/Pods-MobilunityTestJob/Pods-MobilunityTestJob.debug.xcconfig"; sourceTree = "<group>"; };
 		F7933F322F266233DB89414C /* Pods_MobilunityTestJobTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobilunityTestJobTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -234,10 +244,12 @@
 		C4D906A3243255FC00B34A20 /* RepositoriesList */ = {
 			isa = PBXGroup;
 			children = (
+				C4D906CF2432807E00B34A20 /* Sections */,
 				C4D906A42432561500B34A20 /* AssemblerRouter */,
 				C4D906A72432564200B34A20 /* Presenter */,
 				C4D906A52432562300B34A20 /* Controller */,
 				C4D906A62432562F00B34A20 /* Views */,
+				C4D906C324326FE100B34A20 /* Models */,
 			);
 			path = RepositoriesList;
 			sourceTree = "<group>";
@@ -262,6 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				C4D906AE2432588000B34A20 /* RepositoriesList.storyboard */,
+				C4D906CE24327BB000B34A20 /* ReposistoryListItemCell */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -307,6 +320,32 @@
 				C4D906C12432630000B34A20 /* SquareRepositoryModel.swift */,
 			);
 			path = Repository;
+			sourceTree = "<group>";
+		};
+		C4D906C324326FE100B34A20 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C4D906C42432701200B34A20 /* RepositoriesListViewModel.swift */,
+				C4D906C8243279A700B34A20 /* RepositoriesListSection.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C4D906CE24327BB000B34A20 /* ReposistoryListItemCell */ = {
+			isa = PBXGroup;
+			children = (
+				C4D906CA24327B6200B34A20 /* ReposistoryListItemCell.swift */,
+				C4D906CB24327B6200B34A20 /* ReposistoryListItemCell.xib */,
+			);
+			path = ReposistoryListItemCell;
+			sourceTree = "<group>";
+		};
+		C4D906CF2432807E00B34A20 /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				C4D906D0243280A800B34A20 /* RepositoriesListItemSectionController.swift */,
+			);
+			path = Sections;
 			sourceTree = "<group>";
 		};
 		D2DC620FA52769E56CFBCB04 /* Pods */ = {
@@ -407,6 +446,7 @@
 			files = (
 				C4D906AF2432588000B34A20 /* RepositoriesList.storyboard in Resources */,
 				C4D906732432445F00B34A20 /* LaunchScreen.storyboard in Resources */,
+				C4D906CD24327B6200B34A20 /* ReposistoryListItemCell.xib in Resources */,
 				C4D906702432445F00B34A20 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -509,7 +549,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4D906D1243280A800B34A20 /* RepositoriesListItemSectionController.swift in Sources */,
+				C4D906CC24327B6200B34A20 /* ReposistoryListItemCell.swift in Sources */,
 				C4D9069824324C6600B34A20 /* RootViewController.swift in Sources */,
+				C4D906C9243279A700B34A20 /* RepositoriesListSection.swift in Sources */,
 				C4D906BE243262C000B34A20 /* GitHubAPI.swift in Sources */,
 				C4D906A12432501200B34A20 /* Presentable.swift in Sources */,
 				C4D9068D24324AB400B34A20 /* AppDependencyContainer.swift in Sources */,
@@ -527,6 +570,7 @@
 				C4D906AD2432581400B34A20 /* RepositoriesListPresenter.swift in Sources */,
 				C4D9069D24324FA900B34A20 /* UIWindowConfigurable.swift in Sources */,
 				C4D9068F24324B7E00B34A20 /* RootScreen.swift in Sources */,
+				C4D906C52432701200B34A20 /* RepositoriesListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
