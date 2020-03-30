@@ -1,24 +1,32 @@
 PODS:
+  - Alamofire (5.0.5)
   - R.swift (5.1.0):
     - R.swift.Library (~> 5.1.0)
   - R.swift.Library (5.1.0)
+  - RxSwift (5.1.1)
   - Swinject (2.7.1)
 
 DEPENDENCIES:
-  - R.swift
+  - Alamofire (= 5.0.5)
+  - R.swift (= 5.1.0)
+  - RxSwift (= 5.1.1)
   - Swinject (= 2.7.1)
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - R.swift
     - R.swift.Library
+    - RxSwift
     - Swinject
 
 SPEC CHECKSUMS:
+  Alamofire: df2f8f826963b08b9a870791ad48e07a10090b2e
   R.swift: 8cbc4fc69b740305b6a17c8a8ed968eb788962d9
   R.swift.Library: fa85ce1e0d0b7e818cd9e080df910ba54d2776cc
+  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
 
-PODFILE CHECKSUM: c1c133ae824cdf7a80a9805f9a929af86c8304cf
+PODFILE CHECKSUM: 769756b75cab9448bcd1a5063e334543903ccfd3
 
 COCOAPODS: 1.9.1

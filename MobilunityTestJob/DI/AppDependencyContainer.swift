@@ -15,6 +15,9 @@ class AppDependencyContainer {
             container.register(RootDIContainer.self) { resolver -> RootDIContainer in
                 RootDIContainer(parentContainer: container)
             }
+            container.register(NetworkManagerProtocol.self) { resolver -> NetworkManagerProtocol in
+                return NetworkManager()
+            }
         }
     }()
     

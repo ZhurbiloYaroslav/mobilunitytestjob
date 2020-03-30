@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol RepositoriesListRouter {
+    func openDetails(of: SquareRepositoryModel)
+}
+
 class RepositoriesListScreen: Presentable {
     private let repositoriesListPresenter: RepositoriesListViewOutput
     private let repositoriesListVCFactory: RepositoriesListVCFactory
@@ -20,5 +24,11 @@ class RepositoriesListScreen: Presentable {
     
     func toPresentable() -> UIViewController {
         repositoriesListVCFactory(repositoriesListPresenter).toPresentable()
+    }
+}
+
+extension RepositoriesListScreen: RepositoriesListRouter {
+    func openDetails(of: SquareRepositoryModel) {
+        // Intentionally left blank
     }
 }

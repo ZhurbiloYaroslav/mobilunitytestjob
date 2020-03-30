@@ -23,7 +23,8 @@ class RepositoriesListDIContainer {
                 }
             }
             container.register(RepositoriesListViewOutput.self) { resolver in
-                return RepositoriesListPresenter()
+                let networkManager = resolver.resolve(NetworkManagerProtocol.self)!
+                return RepositoriesListPresenter(networkManager: networkManager)
             }
             container.register(RepositoriesListViewInput.self) { resolver in
                 R.storyboard.repositoriesList.repositoriesListVC()!
