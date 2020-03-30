@@ -5,6 +5,7 @@ target 'MobilunityTestJob' do
   use_frameworks!
 
   # Pods for MobilunityTestJob
+  pod 'R.swift', '5.1.0'
   pod 'Swinject', '2.7.1'
 
   target 'MobilunityTestJobTests' do
