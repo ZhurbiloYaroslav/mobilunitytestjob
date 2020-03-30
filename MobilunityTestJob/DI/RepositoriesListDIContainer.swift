@@ -26,7 +26,7 @@ class RepositoriesListDIContainer {
                 return RepositoriesListPresenter()
             }
             container.register(RepositoriesListViewInput.self) { resolver in
-                RepositoriesListVC()
+                R.storyboard.repositoriesList.repositoriesListVC()!
             }
             container.register(RepositoriesListVCFactory.self) {
                 (resolver, presenter: RepositoriesListViewOutput) -> RepositoriesListVCFactory in
