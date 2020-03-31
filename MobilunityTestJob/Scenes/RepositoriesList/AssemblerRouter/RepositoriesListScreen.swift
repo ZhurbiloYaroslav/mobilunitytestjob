@@ -9,7 +9,7 @@
 import UIKit
 
 protocol RepositoriesListRouter {
-    func openDetails(of: SquareRepositoryModel)
+    func openDetails(of model: SquareRepositoryModel)
 }
 
 class RepositoriesListScreen: Presentable {
@@ -28,7 +28,7 @@ class RepositoriesListScreen: Presentable {
 }
 
 extension RepositoriesListScreen: RepositoriesListRouter {
-    func openDetails(of: SquareRepositoryModel) {
+    func openDetails(of model: SquareRepositoryModel) {
         // Intentionally left blank
     }
 }

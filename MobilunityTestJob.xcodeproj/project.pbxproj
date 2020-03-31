@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		00BCF5E72D3226E252BA074C /* Pods_MobilunityTestJobTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7933F322F266233DB89414C /* Pods_MobilunityTestJobTests.framework */; };
 		5060C7A387F41B9267E65CE4 /* Pods_MobilunityTestJob.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E0344ABC0E77C26AD5CABC9 /* Pods_MobilunityTestJob.framework */; };
+		C453DD1724332D5300FFD8CA /* RootRouterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C453DD1624332D5300FFD8CA /* RootRouterSpy.swift */; };
 		C4D906672432445B00B34A20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D906662432445B00B34A20 /* AppDelegate.swift */; };
 		C4D906702432445F00B34A20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4D9066F2432445F00B34A20 /* Assets.xcassets */; };
 		C4D906732432445F00B34A20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4D906712432445F00B34A20 /* LaunchScreen.storyboard */; };
-		C4D9067E2432445F00B34A20 /* MobilunityTestJobTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D9067D2432445F00B34A20 /* MobilunityTestJobTests.swift */; };
 		C4D9068D24324AB400B34A20 /* AppDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D9068C24324AB400B34A20 /* AppDependencyContainer.swift */; };
 		C4D9068F24324B7E00B34A20 /* RootScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D9068E24324B7E00B34A20 /* RootScreen.swift */; };
 		C4D9069424324BF700B34A20 /* RootPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D9069324324BF700B34A20 /* RootPresenter.swift */; };
@@ -36,6 +36,13 @@
 		C4D906CC24327B6200B34A20 /* ReposistoryListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D906CA24327B6200B34A20 /* ReposistoryListItemCell.swift */; };
 		C4D906CD24327B6200B34A20 /* ReposistoryListItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4D906CB24327B6200B34A20 /* ReposistoryListItemCell.xib */; };
 		C4D906D1243280A800B34A20 /* RepositoriesListItemSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D906D0243280A800B34A20 /* RepositoriesListItemSectionController.swift */; };
+		C4D906D42432911000B34A20 /* RepositoriesListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D906D32432911000B34A20 /* RepositoriesListPresenterTests.swift */; };
+		C4D906D62432924400B34A20 /* RepositoriesListViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D906D52432924400B34A20 /* RepositoriesListViewSpy.swift */; };
+		C4D906D92433207F00B34A20 /* RepositoriesListRouterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D906D82433207F00B34A20 /* RepositoriesListRouterSpy.swift */; };
+		C4D906DB243322F300B34A20 /* SquareRepositories_1.json in Resources */ = {isa = PBXBuildFile; fileRef = C4D906DA243322F300B34A20 /* SquareRepositories_1.json */; };
+		C4D906DF243326A800B34A20 /* SquareRepositories_0.json in Resources */ = {isa = PBXBuildFile; fileRef = C4D906DE243326A800B34A20 /* SquareRepositories_0.json */; };
+		C4D906E1243326C700B34A20 /* SquareRepositories_30.json in Resources */ = {isa = PBXBuildFile; fileRef = C4D906E0243326C700B34A20 /* SquareRepositories_30.json */; };
+		C4D906E624332BC800B34A20 /* RootPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D906E524332BC800B34A20 /* RootPresenterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,13 +60,13 @@
 		8E0344ABC0E77C26AD5CABC9 /* Pods_MobilunityTestJob.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobilunityTestJob.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8AD0620EF6963498CA43DB6 /* Pods-MobilunityTestJob.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobilunityTestJob.release.xcconfig"; path = "Target Support Files/Pods-MobilunityTestJob/Pods-MobilunityTestJob.release.xcconfig"; sourceTree = "<group>"; };
 		B6CF151410D6AF38DEFA7D65 /* Pods-MobilunityTestJobTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobilunityTestJobTests.debug.xcconfig"; path = "Target Support Files/Pods-MobilunityTestJobTests/Pods-MobilunityTestJobTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C453DD1624332D5300FFD8CA /* RootRouterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouterSpy.swift; sourceTree = "<group>"; };
 		C4D906632432445B00B34A20 /* MobilunityTestJob.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobilunityTestJob.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4D906662432445B00B34A20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4D9066F2432445F00B34A20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4D906722432445F00B34A20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4D906742432445F00B34A20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4D906792432445F00B34A20 /* MobilunityTestJobTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobilunityTestJobTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C4D9067D2432445F00B34A20 /* MobilunityTestJobTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobilunityTestJobTests.swift; sourceTree = "<group>"; };
 		C4D9067F2432445F00B34A20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4D9068C24324AB400B34A20 /* AppDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencyContainer.swift; sourceTree = "<group>"; };
 		C4D9068E24324B7E00B34A20 /* RootScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootScreen.swift; sourceTree = "<group>"; };
@@ -84,6 +91,13 @@
 		C4D906CA24327B6200B34A20 /* ReposistoryListItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposistoryListItemCell.swift; sourceTree = "<group>"; };
 		C4D906CB24327B6200B34A20 /* ReposistoryListItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReposistoryListItemCell.xib; sourceTree = "<group>"; };
 		C4D906D0243280A800B34A20 /* RepositoriesListItemSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesListItemSectionController.swift; sourceTree = "<group>"; };
+		C4D906D32432911000B34A20 /* RepositoriesListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesListPresenterTests.swift; sourceTree = "<group>"; };
+		C4D906D52432924400B34A20 /* RepositoriesListViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesListViewSpy.swift; sourceTree = "<group>"; };
+		C4D906D82433207F00B34A20 /* RepositoriesListRouterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesListRouterSpy.swift; sourceTree = "<group>"; };
+		C4D906DA243322F300B34A20 /* SquareRepositories_1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SquareRepositories_1.json; sourceTree = "<group>"; };
+		C4D906DE243326A800B34A20 /* SquareRepositories_0.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SquareRepositories_0.json; sourceTree = "<group>"; };
+		C4D906E0243326C700B34A20 /* SquareRepositories_30.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SquareRepositories_30.json; sourceTree = "<group>"; };
+		C4D906E524332BC800B34A20 /* RootPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootPresenterTests.swift; sourceTree = "<group>"; };
 		D45263C9249D4C943F195F8A /* Pods-MobilunityTestJob.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobilunityTestJob.debug.xcconfig"; path = "Target Support Files/Pods-MobilunityTestJob/Pods-MobilunityTestJob.debug.xcconfig"; sourceTree = "<group>"; };
 		F7933F322F266233DB89414C /* Pods_MobilunityTestJobTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobilunityTestJobTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -155,7 +169,9 @@
 		C4D9067C2432445F00B34A20 /* MobilunityTestJobTests */ = {
 			isa = PBXGroup;
 			children = (
-				C4D9067D2432445F00B34A20 /* MobilunityTestJobTests.swift */,
+				C4D906E224332B6700B34A20 /* Root */,
+				C4D906D2243290DD00B34A20 /* RepositoriesList */,
+				C4D906DC2433267800B34A20 /* MockedData */,
 				C4D9067F2432445F00B34A20 /* Info.plist */,
 			);
 			path = MobilunityTestJobTests;
@@ -348,6 +364,43 @@
 			path = Sections;
 			sourceTree = "<group>";
 		};
+		C4D906D2243290DD00B34A20 /* RepositoriesList */ = {
+			isa = PBXGroup;
+			children = (
+				C4D906D32432911000B34A20 /* RepositoriesListPresenterTests.swift */,
+				C4D906D82433207F00B34A20 /* RepositoriesListRouterSpy.swift */,
+				C4D906D52432924400B34A20 /* RepositoriesListViewSpy.swift */,
+			);
+			path = RepositoriesList;
+			sourceTree = "<group>";
+		};
+		C4D906DC2433267800B34A20 /* MockedData */ = {
+			isa = PBXGroup;
+			children = (
+				C4D906DD2433268800B34A20 /* RepositoriesList */,
+			);
+			path = MockedData;
+			sourceTree = "<group>";
+		};
+		C4D906DD2433268800B34A20 /* RepositoriesList */ = {
+			isa = PBXGroup;
+			children = (
+				C4D906DE243326A800B34A20 /* SquareRepositories_0.json */,
+				C4D906DA243322F300B34A20 /* SquareRepositories_1.json */,
+				C4D906E0243326C700B34A20 /* SquareRepositories_30.json */,
+			);
+			path = RepositoriesList;
+			sourceTree = "<group>";
+		};
+		C4D906E224332B6700B34A20 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				C4D906E524332BC800B34A20 /* RootPresenterTests.swift */,
+				C453DD1624332D5300FFD8CA /* RootRouterSpy.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
 		D2DC620FA52769E56CFBCB04 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -456,6 +509,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4D906DB243322F300B34A20 /* SquareRepositories_1.json in Resources */,
+				C4D906DF243326A800B34A20 /* SquareRepositories_0.json in Resources */,
+				C4D906E1243326C700B34A20 /* SquareRepositories_30.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -596,7 +652,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4D9067E2432445F00B34A20 /* MobilunityTestJobTests.swift in Sources */,
+				C4D906D92433207F00B34A20 /* RepositoriesListRouterSpy.swift in Sources */,
+				C453DD1724332D5300FFD8CA /* RootRouterSpy.swift in Sources */,
+				C4D906D42432911000B34A20 /* RepositoriesListPresenterTests.swift in Sources */,
+				C4D906E624332BC800B34A20 /* RootPresenterTests.swift in Sources */,
+				C4D906D62432924400B34A20 /* RepositoriesListViewSpy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

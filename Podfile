@@ -16,7 +16,7 @@ target 'MobilunityTestJob' do
 end
 
 target 'MobilunityTestJobTests' do
-    pod 'OHHTTPStubs/Swift', '9.0.0'
+    pod 'OHHTTPStubs/Swift', '8.0.0'
     shared_pods
 end
 
