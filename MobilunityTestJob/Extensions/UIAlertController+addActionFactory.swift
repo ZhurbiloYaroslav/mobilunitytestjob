@@ -6,4 +6,10 @@
 //  Copyright © 2020 Yaroslav Zhurbilo. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+extension UIAlertController {
+    func addAction(actionFactory: () -> UIAlertAction) {
+        addAction(actionFactory())
+    }
+}

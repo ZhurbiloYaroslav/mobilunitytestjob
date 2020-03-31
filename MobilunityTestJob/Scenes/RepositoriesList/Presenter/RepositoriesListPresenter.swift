@@ -25,24 +25,39 @@ class RepositoriesListPresenter {
         self.networkManager = networkManager
     }
     
-    func fetchData() {
+    private func fetchData() {
+        updateViewAsLoading()
         networkManager
             .request(GitHubAPI.SquareRepos.getRepositories())
             .observeOn(MainScheduler.instance)
             .subscribe(onSuccess: { [weak self] response in
                 self?.handleSuccess(response: response)
-            }, onError: { error in
-                // TODO: Handle it
+            }, onError: { [weak self] error in
+                self?.handleError(error)
             })
             .disposed(by: disposeBag)
     }
     
-    func handleSuccess(response: [SquareRepositoryModel]) {
+    private func updateViewAsLoading() {
+        view?.update(sections: [.init(id: .preload)])
+    }
+    
+    private func updateViewAsEmpty() {
+        // TODO: Replace it with empty state cell
+        view?.update(sections: [])
+    }
+    
+    private func handleSuccess(response: [SquareRepositoryModel]) {
         let repositorySections: [RepositoriesListSection] = response.map {
             let viewModel = RepositoriesListViewModel(repositoryModel: $0)
             return RepositoriesListSection(id: .repository(viewModel))
         }
         view?.update(sections: repositorySections)
+    }
+    
+    private func handleError(_ error: Error) {
+        updateViewAsEmpty()
+        view?.showError(title: "Network error", message: "Something went wrong")
     }
     
 }

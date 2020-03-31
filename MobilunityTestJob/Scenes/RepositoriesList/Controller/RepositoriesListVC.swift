@@ -11,6 +11,7 @@ import IGListKit
 protocol RepositoriesListViewInput: class, Presentable {
     func attach(output: RepositoriesListViewOutput)
     func update(sections: [RepositoriesListSection])
+    func showError(title: String, message: String)
 }
 
 class RepositoriesListVC: UIViewController {
@@ -26,11 +27,16 @@ class RepositoriesListVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        updateTitle()
         configureAdapter()
         output?.didLoad()
     }
     
-    func configureAdapter() {
+    private func updateTitle() {
+        navigationItem.title = "Square repositories"
+    }
+    
+    private func configureAdapter() {
         adapter.collectionView = collectionView
         adapter.dataSource = self
     }
@@ -46,6 +52,14 @@ extension RepositoriesListVC: RepositoriesListViewInput {
         self.sections = sections
         adapter.performUpdates(animated: true, completion: nil)
     }
+    
+    func showError(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alertController.addAction(actionFactory: {
+            return UIAlertAction(title: "OK", style: .default, handler: nil)
+        })
+        present(alertController, animated: true, completion: nil)
+    }
 }
 
 extension RepositoriesListVC: ListAdapterDataSource {
@@ -60,8 +74,7 @@ extension RepositoriesListVC: ListAdapterDataSource {
                 // TODO: Implement it
                 return ListSectionController()
             case .preload:
-                // TODO: Implement it
-                return ListSectionController()
+                return LoadingSectionController(height: collectionView.bounds.height)
             case .repository(let repository):
                 return RepositoriesListItemSectionController(repository: repository,
                                                              edges: .init(top: 5, left: 0, bottom: 0, right: 0))

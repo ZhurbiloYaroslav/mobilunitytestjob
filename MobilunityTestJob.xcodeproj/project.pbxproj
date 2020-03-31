@@ -10,6 +10,10 @@
 		00BCF5E72D3226E252BA074C /* Pods_MobilunityTestJobTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7933F322F266233DB89414C /* Pods_MobilunityTestJobTests.framework */; };
 		5060C7A387F41B9267E65CE4 /* Pods_MobilunityTestJob.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E0344ABC0E77C26AD5CABC9 /* Pods_MobilunityTestJob.framework */; };
 		C453DD1724332D5300FFD8CA /* RootRouterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C453DD1624332D5300FFD8CA /* RootRouterSpy.swift */; };
+		C453DD1A243330A000FFD8CA /* UIAlertController+addActionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C453DD19243330A000FFD8CA /* UIAlertController+addActionFactory.swift */; };
+		C453DD202433338B00FFD8CA /* LoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C453DD1E2433338B00FFD8CA /* LoadingCell.swift */; };
+		C453DD212433338B00FFD8CA /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C453DD1F2433338B00FFD8CA /* LoadingCell.xib */; };
+		C453DD232433379900FFD8CA /* LoadingSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C453DD222433379900FFD8CA /* LoadingSectionController.swift */; };
 		C4D906672432445B00B34A20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D906662432445B00B34A20 /* AppDelegate.swift */; };
 		C4D906702432445F00B34A20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4D9066F2432445F00B34A20 /* Assets.xcassets */; };
 		C4D906732432445F00B34A20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4D906712432445F00B34A20 /* LaunchScreen.storyboard */; };
@@ -61,6 +65,10 @@
 		A8AD0620EF6963498CA43DB6 /* Pods-MobilunityTestJob.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobilunityTestJob.release.xcconfig"; path = "Target Support Files/Pods-MobilunityTestJob/Pods-MobilunityTestJob.release.xcconfig"; sourceTree = "<group>"; };
 		B6CF151410D6AF38DEFA7D65 /* Pods-MobilunityTestJobTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobilunityTestJobTests.debug.xcconfig"; path = "Target Support Files/Pods-MobilunityTestJobTests/Pods-MobilunityTestJobTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C453DD1624332D5300FFD8CA /* RootRouterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouterSpy.swift; sourceTree = "<group>"; };
+		C453DD19243330A000FFD8CA /* UIAlertController+addActionFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+addActionFactory.swift"; sourceTree = "<group>"; };
+		C453DD1E2433338B00FFD8CA /* LoadingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCell.swift; sourceTree = "<group>"; };
+		C453DD1F2433338B00FFD8CA /* LoadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
+		C453DD222433379900FFD8CA /* LoadingSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingSectionController.swift; sourceTree = "<group>"; };
 		C4D906632432445B00B34A20 /* MobilunityTestJob.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobilunityTestJob.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4D906662432445B00B34A20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4D9066F2432445F00B34A20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -131,6 +139,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C453DD182433308500FFD8CA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C453DD19243330A000FFD8CA /* UIAlertController+addActionFactory.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C453DD1D2433336F00FFD8CA /* LoadingCell */ = {
+			isa = PBXGroup;
+			children = (
+				C453DD1E2433338B00FFD8CA /* LoadingCell.swift */,
+				C453DD1F2433338B00FFD8CA /* LoadingCell.xib */,
+			);
+			path = LoadingCell;
+			sourceTree = "<group>";
+		};
 		C4D9065A2432445B00B34A20 = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +186,7 @@
 				C4D9068A243249DB00B34A20 /* Resources */,
 				C4D9069B24324F9700B34A20 /* Protocols */,
 				C4D906B52432611700B34A20 /* Services */,
+				C453DD182433308500FFD8CA /* Extensions */,
 				C4D90689243249CC00B34A20 /* Scenes */,
 			);
 			path = MobilunityTestJob;
@@ -291,6 +317,7 @@
 			children = (
 				C4D906AE2432588000B34A20 /* RepositoriesList.storyboard */,
 				C4D906CE24327BB000B34A20 /* ReposistoryListItemCell */,
+				C453DD1D2433336F00FFD8CA /* LoadingCell */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -360,6 +387,7 @@
 			isa = PBXGroup;
 			children = (
 				C4D906D0243280A800B34A20 /* RepositoriesListItemSectionController.swift */,
+				C453DD222433379900FFD8CA /* LoadingSectionController.swift */,
 			);
 			path = Sections;
 			sourceTree = "<group>";
@@ -501,6 +529,7 @@
 				C4D906AF2432588000B34A20 /* RepositoriesList.storyboard in Resources */,
 				C4D906732432445F00B34A20 /* LaunchScreen.storyboard in Resources */,
 				C4D906CD24327B6200B34A20 /* ReposistoryListItemCell.xib in Resources */,
+				C453DD212433338B00FFD8CA /* LoadingCell.xib in Resources */,
 				C4D906702432445F00B34A20 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -636,12 +665,15 @@
 				C4D9069424324BF700B34A20 /* RootPresenter.swift in Sources */,
 				C4D906A92432577A00B34A20 /* RepositoriesListScreen.swift in Sources */,
 				C4D906B424325F6C00B34A20 /* R.generated.swift in Sources */,
+				C453DD232433379900FFD8CA /* LoadingSectionController.swift in Sources */,
+				C453DD202433338B00FFD8CA /* LoadingCell.swift in Sources */,
 				C4D906AB243257CD00B34A20 /* RepositoriesListVC.swift in Sources */,
 				C4D9069A24324D7000B34A20 /* RootDIContainer.swift in Sources */,
 				C4D906B1243258D800B34A20 /* RepositoriesListDIContainer.swift in Sources */,
 				C4D906B82432617600B34A20 /* NetworkManager.swift in Sources */,
 				C4D906BC2432626700B34A20 /* HttpMethod.swift in Sources */,
 				C4D906AD2432581400B34A20 /* RepositoriesListPresenter.swift in Sources */,
+				C453DD1A243330A000FFD8CA /* UIAlertController+addActionFactory.swift in Sources */,
 				C4D9069D24324FA900B34A20 /* UIWindowConfigurable.swift in Sources */,
 				C4D9068F24324B7E00B34A20 /* RootScreen.swift in Sources */,
 				C4D906C52432701200B34A20 /* RepositoriesListViewModel.swift in Sources */,

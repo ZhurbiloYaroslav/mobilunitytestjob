@@ -11,6 +11,7 @@ import UIKit
 class ReposistoryListItemCell: UICollectionViewCell {
 
     @IBOutlet weak var repositoryName: UILabel!
+    @IBOutlet weak var repositoryDetails: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,10 +21,12 @@ class ReposistoryListItemCell: UICollectionViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         repositoryName.text = ""
+        repositoryDetails.text = ""
     }
 
     func configure(with model: RepositoriesListViewModelProtocol) {
         repositoryName.text = model.repositoryName
+        repositoryDetails.text = model.repositoryDetails
     }
 
 }
