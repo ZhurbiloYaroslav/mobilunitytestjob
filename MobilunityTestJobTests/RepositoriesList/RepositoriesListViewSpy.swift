@@ -11,6 +11,7 @@ import UIKit
 @testable import MobilunityTestJob
 
 class RepositoriesListViewSpy: RepositoriesListViewInput {
+    
     var onAttachOutput: (() -> Void)?
     func attach(output: RepositoriesListViewOutput) {
         onAttachOutput?()
@@ -19,6 +20,11 @@ class RepositoriesListViewSpy: RepositoriesListViewInput {
     var onUpdateSections: ((_ sections: [RepositoriesListSection]) -> Void)?
     func update(sections: [RepositoriesListSection]) {
         onUpdateSections?(sections)
+    }
+    
+    var onShowError: ((_ title: String, _ message: String) -> Void)?
+    func showError(title: String, message: String) {
+        onShowError?(title, message)
     }
     
     func toPresentable() -> UIViewController {

@@ -76,7 +76,11 @@ class RepositoriesListPresenterTests: XCTestCase {
         let delayExpectation = expectation(description: "Data loading")
         delayExpectation.isInverted = true
         viewSpy.onUpdateSections = { [weak delayExpectation] sections in
-            delayExpectation?.fulfill()
+            sections.forEach { section in
+                guard case RepositoriesListSection.Identifier.repository(_) = section.id
+                    else { return }
+                    delayExpectation?.fulfill()
+            }
         }
         sut.didLoad()
         wait(for: [delayExpectation], timeout: 5)
@@ -85,7 +89,6 @@ class RepositoriesListPresenterTests: XCTestCase {
 
 extension RepositoriesListPresenterTests {
     func runDidLoadSuccessWith(expectedAmount: RepositoriesAmount) {
-        let expectedAmount: RepositoriesAmount = .thirty
         stubLoadAllRepositories(config: expectedAmount)
         let delayExpectation = expectation(description: "Data loading")
         viewSpy.onUpdateSections = { [weak delayExpectation] sections in
@@ -98,7 +101,6 @@ extension RepositoriesListPresenterTests {
     }
     
     func runDidLoadFailureWith(expectedAmount: RepositoriesAmount) {
-        let expectedAmount: RepositoriesAmount = .thirty
         let wrongAmount = const.wrongAmount
         stubLoadAllRepositories(config: expectedAmount)
         let delayExpectation = expectation(description: "Data loading")
@@ -128,6 +130,7 @@ extension RepositoriesListPresenterTests {
             }
         }
     }
+    
     private func stubLoadAllRepositories(config: RepositoriesAmount, statusCode: Int32 = 200) {
         stub(condition: isPath("/orgs/square/repos")) { _ in
             let path = OHPathForFile("SquareRepositories_\(config.amount).json", self.classForCoder)!
