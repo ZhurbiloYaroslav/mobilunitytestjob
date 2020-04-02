@@ -13,6 +13,7 @@ protocol RepositoriesListViewOutput {
     func attach(view: RepositoriesListViewInput)
     func attach(router: RepositoriesListRouter)
     func didLoad()
+    func reloadData()
 }
 
 class RepositoriesListPresenter {
@@ -38,13 +39,14 @@ class RepositoriesListPresenter {
             .disposed(by: disposeBag)
     }
     
-    private func updateViewAsLoading() {
-        view?.update(sections: [.init(id: .preload)])
+    private func updateViewAsEmpty() {
+        view?.update(sections: [RepositoriesListSection(id: .empty)])
     }
     
-    private func updateViewAsEmpty() {
-        // TODO: Replace it with empty state cell
-        view?.update(sections: [])
+    private func updateViewAsLoading() {
+        if let isRefreshing = view?.isRefreshing, !isRefreshing {
+            view?.update(sections: [.init(id: .preload)])
+        }
     }
     
     private func handleSuccess(response: [SquareRepositoryModel]) {
@@ -56,15 +58,23 @@ class RepositoriesListPresenter {
     }
     
     private func handleError(_ error: Error) {
-        updateViewAsEmpty()
-        view?.showError(title: "Network error", message: "Something went wrong")
+        if let err = error as? URLError, err.code == .notConnectedToInternet {
+            view?.update(sections: [RepositoriesListSection(id: .error(title: "Internet error", message: "No internet connection, try again later."))])
+        } else {
+            view?.update(sections: [RepositoriesListSection(id: .error(title: "Error", message: "Something went wrong, try again later."))])
+        }
     }
     
 }
 
 extension RepositoriesListPresenter: RepositoriesListViewOutput {
-    func didLoad() {
+    func reloadData() {
         fetchData()
+    }
+    
+    func didLoad() {
+        // We update view as empty just to show the empty state
+        updateViewAsEmpty()
     }
     
     func attach(view: RepositoriesListViewInput) {

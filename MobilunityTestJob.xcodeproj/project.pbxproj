@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		00BCF5E72D3226E252BA074C /* Pods_MobilunityTestJobTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7933F322F266233DB89414C /* Pods_MobilunityTestJobTests.framework */; };
 		5060C7A387F41B9267E65CE4 /* Pods_MobilunityTestJob.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E0344ABC0E77C26AD5CABC9 /* Pods_MobilunityTestJob.framework */; };
+		C43B7424243643FA0066E673 /* PlaceholderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43B7422243643FA0066E673 /* PlaceholderCell.swift */; };
+		C43B7425243643FA0066E673 /* PlaceholderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C43B7423243643FA0066E673 /* PlaceholderCell.xib */; };
+		C43B7427243645AB0066E673 /* PlaceholderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43B7426243645AB0066E673 /* PlaceholderViewModel.swift */; };
+		C43B7429243646DF0066E673 /* Visibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43B7428243646DF0066E673 /* Visibility.swift */; };
+		C43B742B2436544D0066E673 /* PlaceholderCellButtonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43B742A2436544D0066E673 /* PlaceholderCellButtonModel.swift */; };
+		C43B742D243659360066E673 /* PlaceholderSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43B742C243659360066E673 /* PlaceholderSectionController.swift */; };
 		C453DD1724332D5300FFD8CA /* RootRouterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C453DD1624332D5300FFD8CA /* RootRouterSpy.swift */; };
 		C453DD1A243330A000FFD8CA /* UIAlertController+addActionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C453DD19243330A000FFD8CA /* UIAlertController+addActionFactory.swift */; };
 		C453DD202433338B00FFD8CA /* LoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C453DD1E2433338B00FFD8CA /* LoadingCell.swift */; };
@@ -47,6 +53,11 @@
 		C4D906DF243326A800B34A20 /* SquareRepositories_0.json in Resources */ = {isa = PBXBuildFile; fileRef = C4D906DE243326A800B34A20 /* SquareRepositories_0.json */; };
 		C4D906E1243326C700B34A20 /* SquareRepositories_30.json in Resources */ = {isa = PBXBuildFile; fileRef = C4D906E0243326C700B34A20 /* SquareRepositories_30.json */; };
 		C4D906E624332BC800B34A20 /* RootPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D906E524332BC800B34A20 /* RootPresenterTests.swift */; };
+		C4E35C652433C8E500E9D724 /* UIFont+defaultFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E35C642433C8E500E9D724 /* UIFont+defaultFont.swift */; };
+		C4E35C6B2433CA6500E9D724 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C4E35C672433CA6500E9D724 /* Roboto-Medium.ttf */; };
+		C4E35C6C2433CA6500E9D724 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C4E35C682433CA6500E9D724 /* Roboto-Regular.ttf */; };
+		C4E35C6D2433CA6500E9D724 /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C4E35C692433CA6500E9D724 /* Roboto-Italic.ttf */; };
+		C4E35C6E2433CA6500E9D724 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C4E35C6A2433CA6500E9D724 /* Roboto-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +75,12 @@
 		8E0344ABC0E77C26AD5CABC9 /* Pods_MobilunityTestJob.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobilunityTestJob.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8AD0620EF6963498CA43DB6 /* Pods-MobilunityTestJob.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobilunityTestJob.release.xcconfig"; path = "Target Support Files/Pods-MobilunityTestJob/Pods-MobilunityTestJob.release.xcconfig"; sourceTree = "<group>"; };
 		B6CF151410D6AF38DEFA7D65 /* Pods-MobilunityTestJobTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobilunityTestJobTests.debug.xcconfig"; path = "Target Support Files/Pods-MobilunityTestJobTests/Pods-MobilunityTestJobTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C43B7422243643FA0066E673 /* PlaceholderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderCell.swift; sourceTree = "<group>"; };
+		C43B7423243643FA0066E673 /* PlaceholderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceholderCell.xib; sourceTree = "<group>"; };
+		C43B7426243645AB0066E673 /* PlaceholderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderViewModel.swift; sourceTree = "<group>"; };
+		C43B7428243646DF0066E673 /* Visibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Visibility.swift; sourceTree = "<group>"; };
+		C43B742A2436544D0066E673 /* PlaceholderCellButtonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderCellButtonModel.swift; sourceTree = "<group>"; };
+		C43B742C243659360066E673 /* PlaceholderSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderSectionController.swift; sourceTree = "<group>"; };
 		C453DD1624332D5300FFD8CA /* RootRouterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouterSpy.swift; sourceTree = "<group>"; };
 		C453DD19243330A000FFD8CA /* UIAlertController+addActionFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+addActionFactory.swift"; sourceTree = "<group>"; };
 		C453DD1E2433338B00FFD8CA /* LoadingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCell.swift; sourceTree = "<group>"; };
@@ -106,6 +123,11 @@
 		C4D906DE243326A800B34A20 /* SquareRepositories_0.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SquareRepositories_0.json; sourceTree = "<group>"; };
 		C4D906E0243326C700B34A20 /* SquareRepositories_30.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SquareRepositories_30.json; sourceTree = "<group>"; };
 		C4D906E524332BC800B34A20 /* RootPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootPresenterTests.swift; sourceTree = "<group>"; };
+		C4E35C642433C8E500E9D724 /* UIFont+defaultFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+defaultFont.swift"; sourceTree = "<group>"; };
+		C4E35C672433CA6500E9D724 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		C4E35C682433CA6500E9D724 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		C4E35C692433CA6500E9D724 /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
+		C4E35C6A2433CA6500E9D724 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		D45263C9249D4C943F195F8A /* Pods-MobilunityTestJob.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobilunityTestJob.debug.xcconfig"; path = "Target Support Files/Pods-MobilunityTestJob/Pods-MobilunityTestJob.debug.xcconfig"; sourceTree = "<group>"; };
 		F7933F322F266233DB89414C /* Pods_MobilunityTestJobTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobilunityTestJobTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -143,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				C453DD19243330A000FFD8CA /* UIAlertController+addActionFactory.swift */,
+				C4E35C642433C8E500E9D724 /* UIFont+defaultFont.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -154,6 +177,17 @@
 				C453DD1F2433338B00FFD8CA /* LoadingCell.xib */,
 			);
 			path = LoadingCell;
+			sourceTree = "<group>";
+		};
+		C45CB8F9243642C400B345DF /* PlaceholderCell */ = {
+			isa = PBXGroup;
+			children = (
+				C43B7422243643FA0066E673 /* PlaceholderCell.swift */,
+				C43B7423243643FA0066E673 /* PlaceholderCell.xib */,
+				C43B7426243645AB0066E673 /* PlaceholderViewModel.swift */,
+				C43B742A2436544D0066E673 /* PlaceholderCellButtonModel.swift */,
+			);
+			path = PlaceholderCell;
 			sourceTree = "<group>";
 		};
 		C4D9065A2432445B00B34A20 = {
@@ -223,6 +257,7 @@
 		C4D9068A243249DB00B34A20 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C4E35C662433CA6500E9D724 /* Fonts */,
 				C4D9066F2432445F00B34A20 /* Assets.xcassets */,
 				C4D906712432445F00B34A20 /* LaunchScreen.storyboard */,
 				C4D906B324325F6C00B34A20 /* R.generated.swift */,
@@ -317,6 +352,7 @@
 			children = (
 				C4D906AE2432588000B34A20 /* RepositoriesList.storyboard */,
 				C4D906CE24327BB000B34A20 /* ReposistoryListItemCell */,
+				C45CB8F9243642C400B345DF /* PlaceholderCell */,
 				C453DD1D2433336F00FFD8CA /* LoadingCell */,
 			);
 			path = Views;
@@ -353,6 +389,7 @@
 			isa = PBXGroup;
 			children = (
 				C4D906C0243262EA00B34A20 /* Repository */,
+				C43B7428243646DF0066E673 /* Visibility.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -388,6 +425,7 @@
 			children = (
 				C4D906D0243280A800B34A20 /* RepositoriesListItemSectionController.swift */,
 				C453DD222433379900FFD8CA /* LoadingSectionController.swift */,
+				C43B742C243659360066E673 /* PlaceholderSectionController.swift */,
 			);
 			path = Sections;
 			sourceTree = "<group>";
@@ -427,6 +465,17 @@
 				C453DD1624332D5300FFD8CA /* RootRouterSpy.swift */,
 			);
 			path = Root;
+			sourceTree = "<group>";
+		};
+		C4E35C662433CA6500E9D724 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C4E35C672433CA6500E9D724 /* Roboto-Medium.ttf */,
+				C4E35C682433CA6500E9D724 /* Roboto-Regular.ttf */,
+				C4E35C692433CA6500E9D724 /* Roboto-Italic.ttf */,
+				C4E35C6A2433CA6500E9D724 /* Roboto-Bold.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		D2DC620FA52769E56CFBCB04 /* Pods */ = {
@@ -527,10 +576,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4D906AF2432588000B34A20 /* RepositoriesList.storyboard in Resources */,
+				C4E35C6C2433CA6500E9D724 /* Roboto-Regular.ttf in Resources */,
 				C4D906732432445F00B34A20 /* LaunchScreen.storyboard in Resources */,
+				C4E35C6B2433CA6500E9D724 /* Roboto-Medium.ttf in Resources */,
 				C4D906CD24327B6200B34A20 /* ReposistoryListItemCell.xib in Resources */,
+				C4E35C6E2433CA6500E9D724 /* Roboto-Bold.ttf in Resources */,
+				C4E35C6D2433CA6500E9D724 /* Roboto-Italic.ttf in Resources */,
 				C453DD212433338B00FFD8CA /* LoadingCell.xib in Resources */,
 				C4D906702432445F00B34A20 /* Assets.xcassets in Resources */,
+				C43B7425243643FA0066E673 /* PlaceholderCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -653,11 +707,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4D906D1243280A800B34A20 /* RepositoriesListItemSectionController.swift in Sources */,
+				C4E35C652433C8E500E9D724 /* UIFont+defaultFont.swift in Sources */,
 				C4D906CC24327B6200B34A20 /* ReposistoryListItemCell.swift in Sources */,
 				C4D9069824324C6600B34A20 /* RootViewController.swift in Sources */,
 				C4D906C9243279A700B34A20 /* RepositoriesListSection.swift in Sources */,
+				C43B7424243643FA0066E673 /* PlaceholderCell.swift in Sources */,
 				C4D906BE243262C000B34A20 /* GitHubAPI.swift in Sources */,
 				C4D906A12432501200B34A20 /* Presentable.swift in Sources */,
+				C43B742B2436544D0066E673 /* PlaceholderCellButtonModel.swift in Sources */,
+				C43B7427243645AB0066E673 /* PlaceholderViewModel.swift in Sources */,
 				C4D9068D24324AB400B34A20 /* AppDependencyContainer.swift in Sources */,
 				C4D906672432445B00B34A20 /* AppDelegate.swift in Sources */,
 				C4D906BA2432624200B34A20 /* Endpoint.swift in Sources */,
@@ -666,7 +724,9 @@
 				C4D906A92432577A00B34A20 /* RepositoriesListScreen.swift in Sources */,
 				C4D906B424325F6C00B34A20 /* R.generated.swift in Sources */,
 				C453DD232433379900FFD8CA /* LoadingSectionController.swift in Sources */,
+				C43B742D243659360066E673 /* PlaceholderSectionController.swift in Sources */,
 				C453DD202433338B00FFD8CA /* LoadingCell.swift in Sources */,
+				C43B7429243646DF0066E673 /* Visibility.swift in Sources */,
 				C4D906AB243257CD00B34A20 /* RepositoriesListVC.swift in Sources */,
 				C4D9069A24324D7000B34A20 /* RootDIContainer.swift in Sources */,
 				C4D906B1243258D800B34A20 /* RepositoriesListDIContainer.swift in Sources */,
@@ -844,7 +904,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yaroslav.zhurbilo.MobilunityTestJob;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -864,7 +924,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yaroslav.zhurbilo.MobilunityTestJob;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

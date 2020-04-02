@@ -26,8 +26,14 @@ final class RepositoriesListItemSectionController: ListSectionController {
     override func sizeForItem(at index: Int) -> CGSize {
         guard let containerSize = collectionContext?.containerSize
             else { return .zero }
-        let width = containerSize.width - inset.left - inset.right
-        return CGSize(width: width, height: 100)
+        let size: CGSize = {
+            let width = containerSize.width - inset.left - inset.right
+            let height = ReposistoryListItemCell.height(for: width,
+                                                        title: repository.repositoryName,
+                                                        subtitle: repository.repositoryDetails)
+            return .init(width: width, height: height)
+        }()
+        return CGSize(width: size.width, height: size.height)
     }
     
     override func cellForItem(at index: Int) -> UICollectionViewCell {
