@@ -9,14 +9,15 @@
 import IGListKit
 
 protocol RepositoriesListViewInput: class, Presentable {
+    var isRefreshing: Bool { get }
     func attach(output: RepositoriesListViewOutput)
     func update(sections: [RepositoriesListSection])
-    func showError(title: String, message: String)
 }
 
 class RepositoriesListVC: UIViewController {
     
     @IBOutlet private var collectionView: UICollectionView!
+    private let refreshControl = UIRefreshControl()
     private var output: RepositoriesListViewOutput?
 
     lazy var adapter: ListAdapter = {
@@ -29,6 +30,7 @@ class RepositoriesListVC: UIViewController {
         
         updateTitle()
         configureAdapter()
+        configureRefreshControl()
         output?.didLoad()
     }
     
@@ -40,25 +42,31 @@ class RepositoriesListVC: UIViewController {
         adapter.collectionView = collectionView
         adapter.dataSource = self
     }
+    
+    private func configureRefreshControl() {
+        refreshControl.addTarget(self, action: #selector(handleRefreshControlDidChange), for: .valueChanged)
+        refreshControl.tintColor = .darkGray
+        collectionView.refreshControl = refreshControl
+    }
+    
+    @objc func handleRefreshControlDidChange() {
+        output?.reloadData()
+    }
 
 }
 
 extension RepositoriesListVC: RepositoriesListViewInput {
+    
+    var isRefreshing: Bool { refreshControl.isRefreshing }
+    
     func attach(output: RepositoriesListViewOutput) {
         self.output = output
     }
     
     func update(sections: [RepositoriesListSection]) {
         self.sections = sections
+        refreshControl.endRefreshing()
         adapter.performUpdates(animated: true, completion: nil)
-    }
-    
-    func showError(title: String, message: String) {
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alertController.addAction(actionFactory: {
-            return UIAlertAction(title: "OK", style: .default, handler: nil)
-        })
-        present(alertController, animated: true, completion: nil)
     }
 }
 
@@ -71,8 +79,15 @@ extension RepositoriesListVC: ListAdapterDataSource {
         if let section = object as? RepositoriesListSection {
             switch section.id {
             case .empty:
-                // TODO: Implement it
-                return ListSectionController()
+                return PlaceholderSectionController(height: collectionView.bounds.height,
+                                                    viewModel: PlaceholderCellEmptyViewModel(buttonModel: PlaceholderCellEmptyButtonModel(buttonAction: { [weak self] in
+                                                        self?.output?.reloadData()
+                                                    })))
+            case .error(let title, let message):
+                let viewModel = PlaceholderCellErrorViewModel(title: title, message: message, buttonModel: PlaceholderCellEmptyButtonModel(buttonAction: { [weak self] in
+                    self?.output?.reloadData()
+                }))
+                return PlaceholderSectionController(height: collectionView.bounds.height, viewModel: viewModel)
             case .preload:
                 return LoadingSectionController(height: collectionView.bounds.height)
             case .repository(let repository):
