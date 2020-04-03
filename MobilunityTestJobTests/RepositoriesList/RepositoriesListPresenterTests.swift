@@ -21,13 +21,15 @@ class RepositoriesListPresenterTests: XCTestCase {
     private var sut: RepositoriesListViewOutput!
     private var routerSpy: RepositoriesListRouterSpy!
     private var viewSpy: RepositoriesListViewSpy!
+    private var connectivitySpy: ConnectivitySpy!
     private var const = Constants()
 
     override func setUp() {
         super.setUp()
         
         OHHTTPStubs.setEnabled(true)
-        let networkManager = NetworkManager()
+        let connectivitySpy = ConnectivitySpy()
+        let networkManager = NetworkManager(connectivity: connectivitySpy)
         sut = RepositoriesListPresenter(networkManager: networkManager)
         routerSpy = RepositoriesListRouterSpy()
         viewSpy = RepositoriesListViewSpy()
@@ -74,16 +76,30 @@ class RepositoriesListPresenterTests: XCTestCase {
         let expectedAmount: RepositoriesAmount = .thirty
         stubLoadAllRepositories(config: expectedAmount, statusCode: 500)
         let delayExpectation = expectation(description: "Data loading")
-        delayExpectation.isInverted = true
-        viewSpy.onUpdateSections = { [weak delayExpectation] sections in
-            sections.forEach { section in
-                guard case RepositoriesListSection.Identifier.repository(_) = section.id
-                    else { return }
-                    delayExpectation?.fulfill()
+        delayExpectation.expectedFulfillmentCount = 2
+        viewSpy.onUpdateSections = { [weak delayExpectation, unowned self] sections in
+            if self.isItLoadingSection(sections: sections) {
+                delayExpectation?.fulfill()
+            } else if self.isItErrorSection(sections: sections) {
+                delayExpectation?.fulfill()
             }
         }
         sut.didLoad()
         wait(for: [delayExpectation], timeout: 5)
+    }
+    
+    func isItLoadingSection(sections: [RepositoriesListSection]) -> Bool {
+        guard sections.count == 1 else { return false }
+        guard case RepositoriesListSection.Identifier.preload = sections[0].id
+            else { return false }
+        return true
+    }
+    
+    func isItErrorSection(sections: [RepositoriesListSection]) -> Bool {
+        guard sections.count == 1 else { return false }
+        guard case RepositoriesListSection.Identifier.error = sections[0].id
+            else { return false }
+        return true
     }
 }
 
@@ -91,8 +107,11 @@ extension RepositoriesListPresenterTests {
     func runDidLoadSuccessWith(expectedAmount: RepositoriesAmount) {
         stubLoadAllRepositories(config: expectedAmount)
         let delayExpectation = expectation(description: "Data loading")
-        viewSpy.onUpdateSections = { [weak delayExpectation] sections in
-            if sections.count == expectedAmount.amount {
+        delayExpectation.expectedFulfillmentCount = 2
+        viewSpy.onUpdateSections = { [weak delayExpectation, unowned self] sections in
+            if self.isItLoadingSection(sections: sections) {
+                delayExpectation?.fulfill()
+            } else if sections.count == expectedAmount.amount {
                 delayExpectation?.fulfill()
             }
         }
@@ -104,8 +123,11 @@ extension RepositoriesListPresenterTests {
         let wrongAmount = const.wrongAmount
         stubLoadAllRepositories(config: expectedAmount)
         let delayExpectation = expectation(description: "Data loading")
-        viewSpy.onUpdateSections = { [weak delayExpectation] sections in
-            if sections.count != wrongAmount {
+        delayExpectation.expectedFulfillmentCount = 2
+        viewSpy.onUpdateSections = { [weak delayExpectation, unowned self] sections in
+            if self.isItLoadingSection(sections: sections) {
+                delayExpectation?.fulfill()
+            } else if sections.count != wrongAmount {
                 delayExpectation?.fulfill()
             }
         }

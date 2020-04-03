@@ -14,6 +14,7 @@ protocol RepositoriesListViewOutput {
     func attach(router: RepositoriesListRouter)
     func didLoad()
     func reloadData()
+    func removeAllData()
 }
 
 class RepositoriesListPresenter {
@@ -58,23 +59,44 @@ class RepositoriesListPresenter {
     }
     
     private func handleError(_ error: Error) {
-        if let err = error as? URLError, err.code == .notConnectedToInternet {
-            view?.update(sections: [RepositoriesListSection(id: .error(title: "Internet error", message: "No internet connection, try again later."))])
+        if networkManager.isConnectedToInternet {
+            showErrorSomethingWentWrong()
         } else {
-            view?.update(sections: [RepositoriesListSection(id: .error(title: "Error", message: "Something went wrong, try again later."))])
+            showErrorNoInternet()
         }
+    }
+    
+    private func showErrorNoInternet() {
+        let sectionId: RepositoriesListSection.Identifier = {
+            .error(image: R.image.error_no_internet(),
+                   title: "Internet error",
+                   message: "No internet connection, try again later.")
+        }()
+        view?.update(sections: [RepositoriesListSection(id: sectionId)])
+    }
+    
+    private func showErrorSomethingWentWrong() {
+        let sectionId: RepositoriesListSection.Identifier = {
+            .error(image: R.image.error_loading_data(),
+                title: "Error",
+                message: "Something went wrong, try again later.")
+        }()
+        view?.update(sections: [RepositoriesListSection(id: sectionId)])
     }
     
 }
 
 extension RepositoriesListPresenter: RepositoriesListViewOutput {
+    func removeAllData() {
+        updateViewAsEmpty()
+    }
+    
     func reloadData() {
         fetchData()
     }
     
     func didLoad() {
-        // We update view as empty just to show the empty state
-        updateViewAsEmpty()
+        fetchData()
     }
     
     func attach(view: RepositoriesListViewInput) {

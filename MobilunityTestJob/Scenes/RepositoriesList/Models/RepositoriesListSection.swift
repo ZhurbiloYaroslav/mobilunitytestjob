@@ -12,14 +12,14 @@ class RepositoriesListSection {
     enum Identifier {
         case empty
         case preload
-        case error(title: String, message: String)
+        case error(image: UIImage?, title: String, message: String)
         case repository(_ repository: RepositoriesListViewModelProtocol)
         
         var name: NSString {
             switch self {
             case .empty: return "empty"
             case .preload: return "preload"
-            case .error(let title, let message): return "error_\(title)_\(message)" as NSString
+            case .error(_, let title, let message): return "error_\(title)_\(message)" as NSString
             case .repository(let model): return "repository_\(model.repositoryId)" as NSString
             }
         }

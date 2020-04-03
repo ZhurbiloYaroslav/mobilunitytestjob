@@ -16,7 +16,10 @@ class AppDependencyContainer {
                 RootDIContainer(parentContainer: container)
             }
             container.register(NetworkManagerProtocol.self) { resolver -> NetworkManagerProtocol in
-                return NetworkManager()
+                return NetworkManager(connectivity: resolver.resolve(ConnectivityProtocol.self)!)
+            }
+            container.register(ConnectivityProtocol.self) { resolver -> ConnectivityProtocol in
+                return Connectivity()
             }
         }
     }()

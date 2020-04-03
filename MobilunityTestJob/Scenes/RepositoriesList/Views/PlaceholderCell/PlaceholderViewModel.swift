@@ -33,10 +33,7 @@ extension PlaceholderCellViewModelling {
 
 struct PlaceholderCellErrorViewModel: PlaceholderCellViewModelling {
     
-    var image: UIImage? {
-        R.image.data_loading_error()
-    }
-    
+    var image: UIImage?
     var title: NSAttributedString?
     var message: NSAttributedString?
     var buttonModel: PlaceholderCellButtonModelling?
@@ -46,7 +43,8 @@ struct PlaceholderCellErrorViewModel: PlaceholderCellViewModelling {
     var messageVisibility: Visibility { .visible }
     var buttonVisibility: Visibility { .visible }
     
-    init(title: String, message: String, buttonModel: PlaceholderCellButtonModelling) {
+    init(image: UIImage?, title: String, message: String, buttonModel: PlaceholderCellButtonModelling) {
+        self.image = image
         self.title = title.styled(with: Self.titleStyle)
         self.message =  message.styled(with: Self.messageStyle)
         self.buttonModel = buttonModel
@@ -62,7 +60,7 @@ struct PlaceholderCellEmptyViewModel: PlaceholderCellViewModelling {
     }
     
     var title: NSAttributedString? {
-        "Empty state title".styled(with: Self.titleStyle)
+        "There is no data".styled(with: Self.titleStyle)
     }
     
     var message: NSAttributedString? {

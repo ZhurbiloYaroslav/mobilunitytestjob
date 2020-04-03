@@ -10,17 +10,24 @@ import Foundation
 import Alamofire
 import RxSwift
 
-protocol NetworkManagerProtocol {
+protocol NetworkManagerProtocol: ConnectivityProtocol {
     func request<Response>(_ endpoint: Endpoint<Response>) -> Single<Response>
 }
 
 final class NetworkManager: NetworkManagerProtocol {
+    private let connectivity: ConnectivityProtocol
     private let manager: Alamofire.Session
     private let queue = DispatchQueue(label: "NetworkingClientQueue")
 
-    init() {
+    init(connectivity: ConnectivityProtocol) {
+        self.connectivity = connectivity
         let configuration = URLSessionConfiguration.default
+        configuration.requestCachePolicy = .reloadIgnoringCacheData
         self.manager = Alamofire.Session(configuration: configuration)
+    }
+    
+    var isConnectedToInternet: Bool {
+        return connectivity.isConnectedToInternet
     }
 
     func request<Response>(_ endpoint: Endpoint<Response>) -> Single<Response> {
@@ -38,8 +45,7 @@ final class NetworkManager: NetworkManagerProtocol {
                             let response = try endpoint.decode(data)
                             return .success(response)
                         } catch {
-                            // TODO: Fix it
-                            return .failure(AFError.explicitlyCancelled)
+                            return .failure(.responseSerializationFailed(reason: .decodingFailed(error: error)))
                         }
                     }
                     switch result {

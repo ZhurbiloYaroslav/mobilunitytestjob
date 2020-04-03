@@ -26,7 +26,7 @@ struct PlaceholderCellErrorButtonModel: PlaceholderCellButtonModelling {
     var title: NSAttributedString {
         "Try again later".styled(with: Self.textStyle)
     }
-    var backgroundColor: UIColor { .red }
+    var backgroundColor: UIColor { #colorLiteral(red: 0.9582068324, green: 0.2639927566, blue: 0.2124654949, alpha: 1) }
     var buttonAction: () -> Void
 }
 
@@ -34,6 +34,6 @@ struct PlaceholderCellEmptyButtonModel: PlaceholderCellButtonModelling {
     var title: NSAttributedString {
         "Reload".styled(with: Self.textStyle)
     }
-    var backgroundColor: UIColor { .blue }
+    var backgroundColor: UIColor { #colorLiteral(red: 0.1301785111, green: 0.5873633027, blue: 0.9524403214, alpha: 1) }
     var buttonAction: () -> Void
 }
