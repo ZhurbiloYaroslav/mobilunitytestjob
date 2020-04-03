@@ -22,6 +22,7 @@
 		C453DD232433379900FFD8CA /* LoadingSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C453DD222433379900FFD8CA /* LoadingSectionController.swift */; };
 		C462708C243713A700EAFFAB /* RepsitoryOwnerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C462708B243713A700EAFFAB /* RepsitoryOwnerModel.swift */; };
 		C462708E24371F5900EAFFAB /* UIView+roundCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = C462708D24371F5900EAFFAB /* UIView+roundCorners.swift */; };
+		C46270902437279E00EAFFAB /* Connectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C462708F2437279E00EAFFAB /* Connectivity.swift */; };
 		C4D906672432445B00B34A20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D906662432445B00B34A20 /* AppDelegate.swift */; };
 		C4D906702432445F00B34A20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4D9066F2432445F00B34A20 /* Assets.xcassets */; };
 		C4D906732432445F00B34A20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4D906712432445F00B34A20 /* LaunchScreen.storyboard */; };
@@ -90,6 +91,7 @@
 		C453DD222433379900FFD8CA /* LoadingSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingSectionController.swift; sourceTree = "<group>"; };
 		C462708B243713A700EAFFAB /* RepsitoryOwnerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepsitoryOwnerModel.swift; sourceTree = "<group>"; };
 		C462708D24371F5900EAFFAB /* UIView+roundCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+roundCorners.swift"; sourceTree = "<group>"; };
+		C462708F2437279E00EAFFAB /* Connectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connectivity.swift; sourceTree = "<group>"; };
 		C4D906632432445B00B34A20 /* MobilunityTestJob.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobilunityTestJob.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4D906662432445B00B34A20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4D9066F2432445F00B34A20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -386,6 +388,7 @@
 				C4D906B92432624200B34A20 /* Endpoint.swift */,
 				C4D906BB2432626700B34A20 /* HttpMethod.swift */,
 				C4D906BD243262C000B34A20 /* GitHubAPI.swift */,
+				C462708F2437279E00EAFFAB /* Connectivity.swift */,
 			);
 			path = NetworkManager;
 			sourceTree = "<group>";
@@ -714,6 +717,7 @@
 			files = (
 				C4D906D1243280A800B34A20 /* RepositoriesListItemSectionController.swift in Sources */,
 				C462708C243713A700EAFFAB /* RepsitoryOwnerModel.swift in Sources */,
+				C46270902437279E00EAFFAB /* Connectivity.swift in Sources */,
 				C4E35C652433C8E500E9D724 /* UIFont+defaultFont.swift in Sources */,
 				C4D906CC24327B6200B34A20 /* ReposistoryListItemCell.swift in Sources */,
 				C4D9069824324C6600B34A20 /* RootViewController.swift in Sources */,

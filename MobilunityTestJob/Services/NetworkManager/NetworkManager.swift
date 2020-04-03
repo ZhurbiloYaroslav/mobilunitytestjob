@@ -39,8 +39,7 @@ final class NetworkManager: NetworkManagerProtocol {
                             let response = try endpoint.decode(data)
                             return .success(response)
                         } catch {
-                            // TODO: Fix it
-                            return .failure(AFError.explicitlyCancelled)
+                            return .failure(.responseSerializationFailed(reason: .decodingFailed(error: error)))
                         }
                     }
                     switch result {

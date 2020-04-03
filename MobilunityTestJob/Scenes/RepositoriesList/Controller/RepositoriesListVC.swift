@@ -16,9 +16,14 @@ protocol RepositoriesListViewInput: class, Presentable {
 
 class RepositoriesListVC: UIViewController {
     
+    private var output: RepositoriesListViewOutput?
     @IBOutlet private var collectionView: UICollectionView!
     private let refreshControl = UIRefreshControl()
-    private var output: RepositoriesListViewOutput?
+    private lazy var deleteButton: UIBarButtonItem = {
+        UIBarButtonItem(barButtonSystemItem: .trash,
+                                     target: self,
+                                     action: #selector(didPressDeleteButton))
+    }()
 
     lazy var adapter: ListAdapter = {
         return ListAdapter(updater: ListAdapterUpdater(), viewController: self, workingRangeSize: 3)
@@ -28,14 +33,15 @@ class RepositoriesListVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        updateTitle()
+        updateNavigationBar()
         configureAdapter()
         configureRefreshControl()
         output?.didLoad()
     }
     
-    private func updateTitle() {
+    private func updateNavigationBar() {
         navigationItem.title = "Square repositories"
+        navigationItem.rightBarButtonItem = deleteButton
     }
     
     private func configureAdapter() {
@@ -51,6 +57,10 @@ class RepositoriesListVC: UIViewController {
     
     @objc func handleRefreshControlDidChange() {
         output?.reloadData()
+    }
+    
+    @objc func didPressDeleteButton() {
+        output?.removeAllData()
     }
 
 }
@@ -83,10 +93,14 @@ extension RepositoriesListVC: ListAdapterDataSource {
                                                     viewModel: PlaceholderCellEmptyViewModel(buttonModel: PlaceholderCellEmptyButtonModel(buttonAction: { [weak self] in
                                                         self?.output?.reloadData()
                                                     })))
-            case .error(let title, let message):
-                let viewModel = PlaceholderCellErrorViewModel(title: title, message: message, buttonModel: PlaceholderCellEmptyButtonModel(buttonAction: { [weak self] in
+            case .error(let image, let title, let message):
+                let buttonModel = PlaceholderCellEmptyButtonModel(buttonAction: { [weak self] in
                     self?.output?.reloadData()
-                }))
+                })
+                let viewModel = PlaceholderCellErrorViewModel(image: image,
+                                                              title: title,
+                                                              message: message,
+                                                              buttonModel: buttonModel)
                 return PlaceholderSectionController(height: collectionView.bounds.height, viewModel: viewModel)
             case .preload:
                 return LoadingSectionController(height: collectionView.bounds.height)
