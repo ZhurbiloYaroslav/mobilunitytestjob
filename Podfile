@@ -12,6 +12,7 @@ target 'MobilunityTestJob' do
   pod 'Swinject', '2.7.1'
   pod 'RxSwift', '5.1.1'
   pod 'Alamofire', '5.0.5'
+  pod 'Kingfisher', '5.13.2'
   pod 'BonMot', '5.5.1'
 end
 

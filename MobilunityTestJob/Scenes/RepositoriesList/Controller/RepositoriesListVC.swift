@@ -21,7 +21,7 @@ class RepositoriesListVC: UIViewController {
     private var output: RepositoriesListViewOutput?
 
     lazy var adapter: ListAdapter = {
-        return ListAdapter(updater: ListAdapterUpdater(), viewController: self, workingRangeSize: 0)
+        return ListAdapter(updater: ListAdapterUpdater(), viewController: self, workingRangeSize: 3)
     }()
     private var sections: [ListDiffable] = []
     

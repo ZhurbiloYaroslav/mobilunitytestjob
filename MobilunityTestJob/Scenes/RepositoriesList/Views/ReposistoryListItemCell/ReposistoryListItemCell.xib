@@ -10,42 +10,56 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ReposistoryListItemCell" customModule="MobilunityTestJob" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="128"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="128"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CTV-jK-Ekb" userLabel="Content Container">
-                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="128"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repository name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WEh-lp-f0B">
-                                <rect key="frame" x="16" y="8" width="208" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Repository details" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6yx-Yo-KyN">
-                                <rect key="frame" x="16" y="36.5" width="208" height="83.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="repository_decoupled" translatesAutoresizingMaskIntoConstraints="NO" id="EbH-9y-wJU">
+                                <rect key="frame" x="16" y="34" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="PHo-gt-REx"/>
+                                    <constraint firstAttribute="height" constant="60" id="U6g-AB-rE9"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="HOA-uE-DMG">
+                                <rect key="frame" x="92" y="39.5" width="267" height="49"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repository name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WEh-lp-f0B">
+                                        <rect key="frame" x="0.0" y="0.0" width="267" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Repository details" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6yx-Yo-KyN">
+                                        <rect key="frame" x="0.0" y="28.5" width="267" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="6yx-Yo-KyN" secondAttribute="bottom" constant="8" id="4Qr-NS-C3y"/>
-                            <constraint firstAttribute="trailing" secondItem="6yx-Yo-KyN" secondAttribute="trailing" constant="16" id="BcZ-yx-mKW"/>
-                            <constraint firstItem="WEh-lp-f0B" firstAttribute="leading" secondItem="CTV-jK-Ekb" secondAttribute="leading" constant="16" id="GWV-Kq-9mB"/>
-                            <constraint firstItem="WEh-lp-f0B" firstAttribute="top" secondItem="CTV-jK-Ekb" secondAttribute="top" constant="8" id="OyD-WI-qh6"/>
-                            <constraint firstItem="6yx-Yo-KyN" firstAttribute="leading" secondItem="CTV-jK-Ekb" secondAttribute="leading" constant="16" id="coq-1X-8lg"/>
-                            <constraint firstAttribute="trailing" secondItem="WEh-lp-f0B" secondAttribute="trailing" constant="16" id="owj-ld-FKD"/>
-                            <constraint firstItem="6yx-Yo-KyN" firstAttribute="top" secondItem="WEh-lp-f0B" secondAttribute="bottom" constant="8" id="wLg-JP-UnD"/>
+                            <constraint firstItem="HOA-uE-DMG" firstAttribute="leading" secondItem="EbH-9y-wJU" secondAttribute="trailing" constant="16" id="CWa-fu-IZn"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="EbH-9y-wJU" secondAttribute="bottom" constant="8" id="Ghc-Yi-4jA"/>
+                            <constraint firstAttribute="trailing" secondItem="HOA-uE-DMG" secondAttribute="trailing" constant="16" id="VA3-r9-Lp9"/>
+                            <constraint firstItem="EbH-9y-wJU" firstAttribute="leading" secondItem="CTV-jK-Ekb" secondAttribute="leading" constant="16" id="Vgb-UG-HUA"/>
+                            <constraint firstItem="EbH-9y-wJU" firstAttribute="centerY" secondItem="CTV-jK-Ekb" secondAttribute="centerY" id="ndf-R4-Cju"/>
+                            <constraint firstItem="HOA-uE-DMG" firstAttribute="centerY" secondItem="CTV-jK-Ekb" secondAttribute="centerY" id="uoi-0h-2jt"/>
+                            <constraint firstItem="HOA-uE-DMG" firstAttribute="top" relation="greaterThanOrEqual" secondItem="CTV-jK-Ekb" secondAttribute="top" constant="8" id="vBf-vi-Yp0"/>
+                            <constraint firstItem="EbH-9y-wJU" firstAttribute="top" relation="greaterThanOrEqual" secondItem="CTV-jK-Ekb" secondAttribute="top" constant="8" id="wrA-pM-DgT"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="HOA-uE-DMG" secondAttribute="bottom" constant="8" id="y7S-Md-hW9"/>
                         </constraints>
                     </view>
                 </subviews>
             </view>
-            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="CTV-jK-Ekb" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="9ST-R6-c34"/>
                 <constraint firstItem="CTV-jK-Ekb" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="STQ-cL-45I"/>
@@ -54,12 +68,16 @@
                 <constraint firstAttribute="trailing" secondItem="CTV-jK-Ekb" secondAttribute="trailing" id="lCd-mT-hb8"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <size key="customSize" width="286" height="110"/>
+            <size key="customSize" width="493" height="110"/>
             <connections>
                 <outlet property="repositoryDetails" destination="6yx-Yo-KyN" id="jBJ-Z3-uc1"/>
+                <outlet property="repositoryImage" destination="EbH-9y-wJU" id="zKv-wB-Fwf"/>
                 <outlet property="repositoryName" destination="WEh-lp-f0B" id="PoZ-XA-eJd"/>
             </connections>
-            <point key="canvasLocation" x="-59.420289855072468" y="81.696428571428569"/>
+            <point key="canvasLocation" x="90.579710144927546" y="81.696428571428569"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="repository_decoupled" width="60" height="60"/>
+    </resources>
 </document>

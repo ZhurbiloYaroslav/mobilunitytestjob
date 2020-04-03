@@ -20,6 +20,7 @@ final class NetworkManager: NetworkManagerProtocol {
 
     init() {
         let configuration = URLSessionConfiguration.default
+        configuration.requestCachePolicy = .reloadIgnoringCacheData
         self.manager = Alamofire.Session(configuration: configuration)
     }
 

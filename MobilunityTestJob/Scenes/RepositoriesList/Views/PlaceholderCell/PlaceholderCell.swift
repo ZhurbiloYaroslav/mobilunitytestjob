@@ -17,6 +17,11 @@ class PlaceholderCell: UICollectionViewCell {
     
     private var buttonAction: (() -> Void)?
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        actionButton.setRoundCorners()
+    }
+    
     func configure(viewModel: PlaceholderCellViewModelling) {
         imageView.image = viewModel.image
         imageView.isHidden = viewModel.imageVisibility.isHidden

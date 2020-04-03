@@ -4,6 +4,9 @@ PODS:
   - IGListDiffKit (4.0.0)
   - IGListKit (4.0.0):
     - IGListDiffKit (= 4.0.0)
+  - Kingfisher (5.13.2):
+    - Kingfisher/Core (= 5.13.2)
+  - Kingfisher/Core (5.13.2)
   - OHHTTPStubs/Core (8.0.0)
   - OHHTTPStubs/Default (8.0.0):
     - OHHTTPStubs/Core
@@ -25,8 +28,9 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (= 5.0.5)
-  - BonMot
+  - BonMot (= 5.5.1)
   - IGListKit (= 4.0.0)
+  - Kingfisher
   - OHHTTPStubs/Swift (= 8.0.0)
   - R.swift (= 5.1.0)
   - RxSwift (= 5.1.1)
@@ -38,6 +42,7 @@ SPEC REPOS:
     - BonMot
     - IGListDiffKit
     - IGListKit
+    - Kingfisher
     - OHHTTPStubs
     - R.swift
     - R.swift.Library
@@ -49,12 +54,13 @@ SPEC CHECKSUMS:
   BonMot: 0d179476725af81f622a6d9f660f43048070016a
   IGListDiffKit: 665d6cf43ce726e676013db9c7d6c4294259b6b2
   IGListKit: fd5a5d21935298f5849fa49d426843cff97b77c7
+  Kingfisher: d342c8354c10c3d85a27d6d4c42c41285924b898
   OHHTTPStubs: 9cbce6364bec557cc3439aa6bb7514670d780881
   R.swift: 8cbc4fc69b740305b6a17c8a8ed968eb788962d9
   R.swift.Library: fa85ce1e0d0b7e818cd9e080df910ba54d2776cc
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
 
-PODFILE CHECKSUM: 0c70bb02b6deb1d333cb49084235cdc6c5e963aa
+PODFILE CHECKSUM: 9f25369c876336f082b64383a51ec6b9f55f0c60
 
 COCOAPODS: 1.9.1
