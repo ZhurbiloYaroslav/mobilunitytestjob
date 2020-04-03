@@ -59,7 +59,7 @@ class RepositoriesListPresenter {
     }
     
     private func handleError(_ error: Error) {
-        if Connectivity.isConnectedToInternet {
+        if networkManager.isConnectedToInternet {
             showErrorSomethingWentWrong()
         } else {
             showErrorNoInternet()

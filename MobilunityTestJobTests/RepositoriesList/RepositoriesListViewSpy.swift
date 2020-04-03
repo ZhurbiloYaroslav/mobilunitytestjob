@@ -11,6 +11,11 @@ import UIKit
 @testable import MobilunityTestJob
 
 class RepositoriesListViewSpy: RepositoriesListViewInput {
+    var isRefreshing: Bool
+    
+    init() {
+        isRefreshing = false
+    }
     
     var onAttachOutput: (() -> Void)?
     func attach(output: RepositoriesListViewOutput) {
