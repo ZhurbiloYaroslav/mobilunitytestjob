@@ -21,13 +21,15 @@ class RepositoriesListPresenterTests: XCTestCase {
     private var sut: RepositoriesListViewOutput!
     private var routerSpy: RepositoriesListRouterSpy!
     private var viewSpy: RepositoriesListViewSpy!
+    private var connectivitySpy: ConnectivitySpy!
     private var const = Constants()
 
     override func setUp() {
         super.setUp()
         
         OHHTTPStubs.setEnabled(true)
-        let networkManager = NetworkManager()
+        let connectivitySpy = ConnectivitySpy()
+        let networkManager = NetworkManager(connectivity: connectivitySpy)
         sut = RepositoriesListPresenter(networkManager: networkManager)
         routerSpy = RepositoriesListRouterSpy()
         viewSpy = RepositoriesListViewSpy()

@@ -23,6 +23,7 @@
 		C462708C243713A700EAFFAB /* RepsitoryOwnerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C462708B243713A700EAFFAB /* RepsitoryOwnerModel.swift */; };
 		C462708E24371F5900EAFFAB /* UIView+roundCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = C462708D24371F5900EAFFAB /* UIView+roundCorners.swift */; };
 		C46270902437279E00EAFFAB /* Connectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C462708F2437279E00EAFFAB /* Connectivity.swift */; };
+		C462709324373A6700EAFFAB /* ConnectivitySpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C462709224373A6700EAFFAB /* ConnectivitySpy.swift */; };
 		C4D906672432445B00B34A20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D906662432445B00B34A20 /* AppDelegate.swift */; };
 		C4D906702432445F00B34A20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4D9066F2432445F00B34A20 /* Assets.xcassets */; };
 		C4D906732432445F00B34A20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4D906712432445F00B34A20 /* LaunchScreen.storyboard */; };
@@ -92,6 +93,7 @@
 		C462708B243713A700EAFFAB /* RepsitoryOwnerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepsitoryOwnerModel.swift; sourceTree = "<group>"; };
 		C462708D24371F5900EAFFAB /* UIView+roundCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+roundCorners.swift"; sourceTree = "<group>"; };
 		C462708F2437279E00EAFFAB /* Connectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connectivity.swift; sourceTree = "<group>"; };
+		C462709224373A6700EAFFAB /* ConnectivitySpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivitySpy.swift; sourceTree = "<group>"; };
 		C4D906632432445B00B34A20 /* MobilunityTestJob.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobilunityTestJob.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4D906662432445B00B34A20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4D9066F2432445F00B34A20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -197,6 +199,14 @@
 			path = PlaceholderCell;
 			sourceTree = "<group>";
 		};
+		C462709124373A5200EAFFAB /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				C462709224373A6700EAFFAB /* ConnectivitySpy.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		C4D9065A2432445B00B34A20 = {
 			isa = PBXGroup;
 			children = (
@@ -236,6 +246,7 @@
 		C4D9067C2432445F00B34A20 /* MobilunityTestJobTests */ = {
 			isa = PBXGroup;
 			children = (
+				C462709124373A5200EAFFAB /* Common */,
 				C4D906E224332B6700B34A20 /* Root */,
 				C4D906D2243290DD00B34A20 /* RepositoriesList */,
 				C4D906DC2433267800B34A20 /* MockedData */,
@@ -761,6 +772,7 @@
 				C4D906D42432911000B34A20 /* RepositoriesListPresenterTests.swift in Sources */,
 				C4D906E624332BC800B34A20 /* RootPresenterTests.swift in Sources */,
 				C4D906D62432924400B34A20 /* RepositoriesListViewSpy.swift in Sources */,
+				C462709324373A6700EAFFAB /* ConnectivitySpy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
